@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 720" width="1440" height="720">
+<rect width="1440" height="720" fill="#eef3f0"/>
+<rect x="10" y="10" width="1420" height="700" fill="none" stroke="#2f4a3c" stroke-width="2" stroke-dasharray="12 9" opacity=".55"/>
+<text x="50%" y="272" text-anchor="middle" font-family="system-ui,sans-serif" font-size="34" font-weight="700" letter-spacing="2" fill="#2f4a3c">ART TO PRODUCE</text>
+<text x="50%" y="323" text-anchor="middle" font-family="ui-monospace,monospace" font-size="32" fill="#55665c">assets/hero.jpg · 1440x720</text>
+<text x="50%" y="366" text-anchor="middle" font-family="system-ui,sans-serif" font-size="34" fill="#2f4a3c">Hero media. Wide still or video poster</text>
+</svg>

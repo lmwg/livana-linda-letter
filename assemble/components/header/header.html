@@ -1,0 +1,45 @@
+<!--
+  component: header
+  Styles: components/header/header.css
+  Tokens used: --text --muted --line --max --sans --red --red-soft
+
+  Fill these. Do not change class names or the checkbox-menu structure.
+
+  brand_href      usually #
+  brand_aria      "{Brand} home"
+  logo_src        page-relative, e.g. assets/top-insider-wellness-logo.svg
+                  Copy the svg into the page's assets/. Do not invent a new mark.
+  brand_name      publication name
+  brand_tagline   one short line
+  nav             2–4 in-page links. hrefs must match ids on the page.
+-->
+<a class="skip-link" href="#MainContent">Skip to content</a>
+
+<header class="site-header">
+  <div class="site-nav">
+    <a class="site-brand" href="[brand_href]" aria-label="[brand_aria]">
+      <img
+        class="site-brand-logo"
+        src="[logo_src]"
+        width="48"
+        height="48"
+        alt=""
+      />
+      <span class="site-brand-copy">
+        <strong class="site-brand-name">[brand_name]</strong>
+        <span class="site-brand-tagline">[brand_tagline]</span>
+      </span>
+    </a>
+    <input class="menu-toggle" type="checkbox" id="menu-toggle" />
+    <label class="menu-button" for="menu-toggle">
+      <span class="visually-hidden">Menu</span>
+    </label>
+    <nav class="site-menu" aria-label="Primary">
+      <ul>
+        <li><a href="[nav_1_href]">[nav_1_label]</a></li>
+        <li><a href="[nav_2_href]">[nav_2_label]</a></li>
+        <li><a href="[nav_3_href]">[nav_3_label]</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,76 @@
+/* component: hero-split — media + offer copy
+   All rules scoped to .hero--split. Do not share this sheet with hero-article. */
+
+.hero--split {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hero--split h1 {
+  font-size: var(--h2, 1.75rem);
+  line-height: var(--lh-heading, 1.15);
+  letter-spacing: var(--ls-heading, -0.01em);
+  margin-bottom: 0.75rem;
+}
+
+.hero--split .hero-media video,
+.hero--split .hero-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius, 0.75rem);
+}
+
+.hero--split .hero-copy {
+  text-align: left;
+}
+
+.hero--split .hero-sub {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: var(--lh-caption, 1.35);
+}
+
+.hero--split .hero-lead {
+  max-width: 66ch;
+  color: var(--muted, #444);
+}
+
+.hero--split .cta-block {
+  justify-items: start;
+}
+
+.hero--split .btn {
+  margin-inline: 0;
+}
+
+.hero--split .trust {
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 48rem) {
+  .hero--split {
+    grid-template-columns: 1.05fr 1fr;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .hero--split h1 {
+    font-size: 2.25rem;
+    letter-spacing: var(--ls-display, -0.02em);
+  }
+
+  .hero--split .hero-copy {
+    text-align: left;
+  }
+
+  .hero--split .cta-block {
+    justify-items: start;
+  }
+
+  .hero--split .trust {
+    text-align: center;
+  }
+}

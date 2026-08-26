@@ -1,0 +1,43 @@
+<!--
+  component: beat
+  Styles: components/beat/beat.css
+  The teaching beat. Always: label, heading, body. Optional: media.
+
+  label           the top row — eyebrow on the left, number on the right
+  num             01, 02, …
+  heading_id      used by aria-labelledby and the h2 id
+  heading
+  media           omit the whole .beat-media block for a text-only beat.
+                  No image, no two-column layout.
+  body            one or more <p>. Paste optional modules AFTER the paragraphs.
+
+  Flip: add beat--flip next to beat (media on the left at desktop).
+
+  Optional modules, inside .beat-body only, after the copy:
+    checks    — one checklist
+    timeline  — one stepped list
+    cta       — button + trust
+  At most one of checks or timeline. CTA may follow either.
+-->
+<section class="beat wrap" aria-labelledby="[heading_id]">
+  <div class="beat-head">
+    <div class="beat-label">
+      <span>[label]</span>
+      <span class="beat-num">[num]</span>
+    </div>
+    <h2 id="[heading_id]">[heading]</h2>
+  </div>
+  <div class="beat-media">
+    <!-- ART TO PRODUCE: [file] ([w]×[h]). The alt text is the brief. Swap the src. -->
+    <img
+      class="art-placeholder"
+      src="[placeholder_src]"
+      width="1024"
+      height="768"
+      alt="[brief]"
+    />
+  </div>
+  <div class="beat-body">
+    <p>[body]</p>
+  </div>
+</section>

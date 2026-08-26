@@ -1,0 +1,39 @@
+<!--
+  component: timeline
+  Styles: components/timeline/timeline.css
+  Host: inside .beat-body, after the paragraphs. Not a section.
+  At most one list per beat (this or checks, not both).
+  Keep the rail markup. 3 steps is the default; add or drop an li as needed.
+-->
+<ol class="timeline">
+  <li class="timeline-step">
+    <div class="timeline-rail" aria-hidden="true">
+      <span class="timeline-dot"></span>
+      <span class="timeline-line"></span>
+    </div>
+    <div class="timeline-body">
+      <p class="timeline-title">[step_title]</p>
+      <p>[step_body]</p>
+    </div>
+  </li>
+  <li class="timeline-step">
+    <div class="timeline-rail" aria-hidden="true">
+      <span class="timeline-dot"></span>
+      <span class="timeline-line"></span>
+    </div>
+    <div class="timeline-body">
+      <p class="timeline-title">[step_title]</p>
+      <p>[step_body]</p>
+    </div>
+  </li>
+  <li class="timeline-step">
+    <div class="timeline-rail" aria-hidden="true">
+      <span class="timeline-dot"></span>
+      <span class="timeline-line"></span>
+    </div>
+    <div class="timeline-body">
+      <p class="timeline-title">[step_title]</p>
+      <p>[step_body]</p>
+    </div>
+  </li>
+</ol>

@@ -1,0 +1,20 @@
+/* component: art-placeholder — ART TO PRODUCE frame */
+
+.art-placeholder {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero--article figure .art-placeholder,
+.hero--split .hero-media .art-placeholder,
+.beat-media .art-placeholder {
+  border-radius: 0;
+}
+
+@media (min-width: 48rem) {
+  .hero--split .hero-media .art-placeholder,
+  .beat-media .art-placeholder {
+    border-radius: var(--radius, 0.75rem);
+  }
+}

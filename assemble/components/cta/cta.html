@@ -1,0 +1,22 @@
+<!--
+  component: cta
+  Styles: components/cta/cta.css
+  The button + trust line. Not a section.
+
+  Hosts:
+    .beat-body   after the copy (and after checks/timeline if present)
+    .cta-solo      under the notice
+    .hero--split   inside .hero-copy
+    .sticky-cta    (page chrome, not this markup)
+
+  Do not restyle .btn per page. Change this component.
+-->
+<div class="cta-block">
+  <a class="btn" href="[cta_href]">[cta_label]</a>
+  <p class="trust">
+    <strong>[trust_reviews]</strong>
+    Reviews |
+    <strong>[trust_guarantee]</strong>
+    Guarantee
+  </p>
+</div>

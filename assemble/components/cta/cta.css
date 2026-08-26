@@ -1,0 +1,54 @@
+/* component: cta — button + trust line. Shared by beat, cta-solo, hero-split. */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 28rem;
+  margin-inline: auto;
+  padding: 1rem 1.25rem;
+  background: var(--red, #2f4a3c);
+  color: #fff;
+  border-radius: 0.5rem;
+  font-family: var(--sans, "Public Sans", system-ui, sans-serif);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  letter-spacing: normal;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.btn:hover {
+  background: var(--red-hover, #24382e);
+}
+
+.trust {
+  margin-top: 0.75rem;
+  font-family: var(--sans, "Public Sans", system-ui, sans-serif);
+  font-size: 0.8125rem;
+  line-height: var(--lh-caption, 1.35);
+  text-align: center;
+}
+
+.trust strong {
+  font-weight: 700;
+}
+
+.cta-block {
+  display: grid;
+  justify-items: center;
+  margin: 1.5rem 0 0;
+}
+
+.cta-block:empty {
+  display: none;
+}
+
+@media (min-width: 48rem) {
+  .trust {
+    font-size: 1rem;
+  }
+}

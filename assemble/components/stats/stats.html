@@ -1,0 +1,43 @@
+<!--
+  component: stats
+  Styles: components/stats/stats.css
+
+  A section, not a beat. No label, no number. It breaks up the beats with
+  the numbers behind the claim. Usually one per page.
+
+  aria            short section label, e.g. "By the numbers"
+  heading_id      used by aria-labelledby and the .stats-intro id
+  intro_title     the claim in one line
+  intro_sub       optional. Where the numbers come from. Omit the span if unused.
+  stat_value      short. A number, percent, or count. Not a sentence.
+  stat_label      what the number counts, lowercase, no period.
+
+  2 or 4 stats. The grid is two-up on mobile and four-up at desktop, so
+  three leaves a hole. Do not invent a different grid.
+-->
+<section class="stats-section wrap" aria-labelledby="[heading_id]">
+  <div class="stats">
+    <p class="stats-intro" id="[heading_id]">
+      <span class="stats-intro-title">[intro_title]</span>
+      <span class="stats-intro-sub">[intro_sub]</span>
+    </p>
+    <div class="stats-grid">
+      <div class="stat">
+        <p class="stat-value">[stat_value]</p>
+        <p class="stat-label">[stat_label]</p>
+      </div>
+      <div class="stat">
+        <p class="stat-value">[stat_value]</p>
+        <p class="stat-label">[stat_label]</p>
+      </div>
+      <div class="stat">
+        <p class="stat-value">[stat_value]</p>
+        <p class="stat-label">[stat_label]</p>
+      </div>
+      <div class="stat">
+        <p class="stat-value">[stat_value]</p>
+        <p class="stat-label">[stat_label]</p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,54 @@
+<!--
+  component: hero-split
+  Styles: components/hero-split/hero-split.css
+  When: offer-led. Media left, headline + CTA right (stacks on small screens).
+  Pick this OR hero-article. Do not ship both.
+
+  Tokens used: --muted --h2 --lh-heading --lh-caption --ls-heading
+               --ls-display --radius
+  Also needs page primitives still in the page sheet: .btn .trust .cta-block
+
+  Fill these. Do not change class names or the media / copy split.
+
+  media           video (source + poster img fallback) or a single img
+                  inside .hero-media. Keep width/height.
+  h1
+  sub             parenthetical under the headline. Omit the p if unused.
+  lead
+  cta_href
+  cta_label
+  trust_reviews   e.g. 20,000+
+  trust_guarantee e.g. 60-Day
+-->
+<section class="hero hero--split wrap">
+  <div class="hero-media">
+    <video
+      width="1440"
+      height="720"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="[poster_src]"
+      aria-label="[media_aria]"
+    >
+      <source src="[video_src]" type="video/mp4" />
+      <img src="[poster_src]" width="1440" height="720" alt="[media_alt]" />
+    </video>
+  </div>
+  <div class="hero-copy">
+    <h1>[h1]</h1>
+    <p class="hero-sub">[sub]</p>
+    <p class="hero-lead">[lead]</p>
+    <div class="cta-block">
+      <a class="btn" href="[cta_href]">[cta_label]</a>
+      <p class="trust">
+        <strong>[trust_reviews]</strong>
+        Reviews |
+        <strong>[trust_guarantee]</strong>
+        Guarantee
+      </p>
+    </div>
+  </div>
+</section>

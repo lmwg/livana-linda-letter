@@ -1,0 +1,40 @@
+/* component: cta-solo — standalone offer section
+   Hosts notice + optional kicker + cta. Link those sheets too. */
+
+.cta-solo {
+  text-align: center;
+}
+
+.cta-solo > * {
+  max-width: 42rem;
+  margin-inline: auto;
+}
+
+.cta-solo h2 {
+  text-align: left;
+}
+
+.cta-solo .notice {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.cta-solo .notice-label {
+  margin-bottom: 0.25rem;
+}
+
+.cta-solo .cta-kicker {
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.cta-solo .cta-block {
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 48rem) {
+  .cta-solo .notice {
+    max-width: none;
+  }
+}

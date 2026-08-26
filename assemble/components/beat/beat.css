@@ -1,0 +1,106 @@
+/* component: beat — teaching beat shell
+   label + heading + optional media + body. Modules are other components. */
+
+.beat {
+  display: grid;
+  row-gap: var(--beat-media-gap, 1.5rem);
+  column-gap: var(--beat-media-gap, 1.5rem);
+}
+
+.beat h2 {
+  font-size: var(--h2, 1.75rem);
+  line-height: var(--lh-heading, 1.15);
+  letter-spacing: var(--ls-heading, -0.01em);
+}
+
+/* `* + p` so copy that resumes after a checks/timeline module keeps its
+   stack. Was `p + p`, which left a paragraph flush against a list. */
+.beat-label + h2,
+.beat-body > * + p {
+  margin-top: var(--beat-stack, 1rem);
+}
+
+.beat-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--text, #111);
+  font-family: var(--sans, "Public Sans", system-ui, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: var(--ls-caps, 0.1em);
+  line-height: var(--lh-caption, 1.35);
+  text-transform: uppercase;
+}
+
+.beat-label > span:first-child {
+  flex: 1;
+  min-width: 0;
+}
+
+.beat-num {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--red, #2f4a3c);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.beat-media {
+  width: calc(100% + 2 * var(--gutter, 1rem));
+  margin-inline: calc(-1 * var(--gutter, 1rem));
+}
+
+.beat-media img {
+  width: 100%;
+}
+
+@media (min-width: 48rem) {
+  .beat {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "head media"
+      "body media";
+    align-items: start;
+    row-gap: var(--beat-stack, 1rem);
+  }
+
+  .beat-head {
+    grid-area: head;
+  }
+
+  .beat-body {
+    grid-area: body;
+  }
+
+  .beat-media {
+    grid-area: media;
+    align-self: center;
+    width: auto;
+    margin-inline: 0;
+  }
+
+  .beat-media img {
+    border-radius: var(--radius, 0.75rem);
+  }
+
+  .beat--flip {
+    grid-template-areas:
+      "media head"
+      "media body";
+  }
+
+  .beat:not(:has(> .beat-media)) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "head"
+      "body";
+  }
+}

@@ -1,0 +1,69 @@
+<!--
+  component: hero-article
+  Styles: components/hero-article/hero-article.css
+  When: investigation / stacked advertorial. First section in <article>.
+  Pick this OR hero-split. Do not ship both.
+
+  Tokens used: --text --muted --line --red --red-soft --h2 --lh-heading
+               --lh-caption --ls-heading --ls-display --ls-caps --radius
+
+  Fill these. Do not change class names or the kicker → title → dek →
+  byline → figure → lead order.
+
+  kicker          uppercase section label
+  h1_prefix       optional. Omit the span if unused.
+  h1              headline after the prefix
+  dek             dek inner HTML. Wrap the heat in <mark> if needed.
+  byline_photo    page-relative headshot
+  byline_name
+  byline_role
+  byline_meta     "Last updated … · N min read"
+  media           video (source + poster img fallback) or a single img.
+                  Keep width/height. Do not invent a new media block.
+  figcaption
+  lead            one paragraph under the media
+-->
+<section class="hero hero--article wrap">
+  <span class="kicker">[kicker]</span>
+
+  <h1>
+    <span class="h1-prefix">[h1_prefix]</span>
+    [h1]
+  </h1>
+
+  <p class="dek">[dek]</p>
+
+  <div class="byline">
+    <img
+      class="byline-photo"
+      src="[byline_photo]"
+      width="140"
+      height="175"
+      alt="[byline_name]"
+    />
+    <div class="byline-text">
+      <p>By <strong>[byline_name]</strong>, [byline_role]</p>
+      <p class="byline-meta">[byline_meta]</p>
+    </div>
+  </div>
+
+  <figure>
+    <video
+      width="1440"
+      height="720"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="[poster_src]"
+      aria-label="[media_aria]"
+    >
+      <source src="[video_src]" type="video/mp4" />
+      <img src="[poster_src]" width="1440" height="720" alt="[media_alt]" />
+    </video>
+    <figcaption>[figcaption]</figcaption>
+  </figure>
+
+  <p class="hero-lead">[lead]</p>
+</section>

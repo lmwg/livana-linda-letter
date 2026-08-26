@@ -1,0 +1,64 @@
+/* component: notice — callout. Not a beat. */
+
+.notice {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border-left: 3px solid var(--notice-accent, #c8912a);
+  border-radius: 0 var(--radius, 0.75rem) var(--radius, 0.75rem) 0;
+  background: var(--notice-bg, #fdfaf1);
+  color: var(--text, #111);
+  line-height: 1.45;
+}
+
+article > section:has(> .notice):not(.cta-solo) {
+  padding-block: 0.75rem;
+}
+
+.beat-body .notice {
+  margin: 1.5rem 0 0;
+  padding: 1rem 1.1rem;
+}
+
+.notice p {
+  font-size: 0.9375rem;
+}
+
+.notice p + p {
+  margin-top: 0.75rem;
+}
+
+.notice > :last-child {
+  margin-bottom: 0;
+}
+
+.notice-label {
+  display: block;
+  margin-bottom: 0.1rem;
+  font-family: var(--sans, "Public Sans", system-ui, sans-serif);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: var(--ls-caps, 0.1em);
+  line-height: var(--lh-caption, 1.35);
+  text-transform: uppercase;
+  color: var(--notice-label, #8a6414);
+}
+
+.notice--info {
+  --notice-bg: var(--green-soft, #eef6ee);
+  --notice-accent: var(--green, #066e06);
+  --notice-label: var(--green, #066e06);
+}
+
+@media (min-width: 48rem) {
+  .notice {
+    padding: 0.75rem 1.25rem;
+  }
+
+  .beat-body .notice {
+    padding: 1.15rem 1.35rem;
+  }
+
+  article > section:has(> .notice):not(.cta-solo) {
+    padding-block: 1rem;
+  }
+}
